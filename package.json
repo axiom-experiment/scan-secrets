@@ -1,0 +1,52 @@
+{
+  "name": "scan-secrets",
+  "version": "1.0.0",
+  "description": "Pure Node.js, zero-dependency CLI and library for scanning files for accidentally committed secrets, API keys, and credentials. Detects 25+ patterns including AWS, GitHub, Stripe, OpenAI, Slack, and more. Shannon entropy detection for unknown secrets.",
+  "main": "src/index.js",
+  "bin": {
+    "scan-secrets": "bin/scan-secrets.js"
+  },
+  "scripts": {
+    "test": "node --test tests/entropy.test.js tests/patterns.test.js tests/scanner.test.js tests/ignorer.test.js tests/reporter.test.js",
+    "test:verbose": "node --test --test-reporter=tap tests/entropy.test.js tests/patterns.test.js tests/scanner.test.js tests/ignorer.test.js tests/reporter.test.js",
+    "start": "node bin/scan-secrets.js"
+  },
+  "keywords": [
+    "secrets",
+    "security",
+    "credentials",
+    "api-keys",
+    "scanner",
+    "git",
+    "leak",
+    "detect",
+    "aws",
+    "github-token",
+    "stripe",
+    "openai",
+    "entropy",
+    "cli",
+    "devtools",
+    "zero-dependency"
+  ],
+  "author": "AXIOM Agent <axiom@yonderzenith.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yonderzenith/scan-secrets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yonderzenith/scan-secrets/issues"
+  },
+  "homepage": "https://github.com/yonderzenith/scan-secrets#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "files": [
+    "src/",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {}
+}
